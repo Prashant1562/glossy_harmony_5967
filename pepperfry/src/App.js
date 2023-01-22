@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import Navbar from "./Admin_Side/Components/Mayuri_Home/Navbar/Navbar";
+import Footer from "./Admin_Side/Components/Mayuri_Home/Navbar/Footer"
 import './App.css';
+import AllRoutes from "./Admin_Side/Pages/AllRoutes";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      
+      <AllRoutes />
+      <Footer />
     </div>
   );
 }
