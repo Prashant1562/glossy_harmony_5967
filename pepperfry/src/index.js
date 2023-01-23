@@ -9,6 +9,11 @@ import theme from "./Utils/theme"
  import { store } from './Redux/store';
 
 
+import reportWebVitals from './reportWebVitals';
+// import { Provider } from 'react-redux';
+// import {store} from './Admin_Side/Redux/store'
+// import { ChakraProvider } from '@chakra-ui/react/dist';
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
