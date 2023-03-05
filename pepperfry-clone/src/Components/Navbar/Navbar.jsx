@@ -7,11 +7,17 @@ import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import { Link  } from 'react-router-dom';
 import DropdownMenu from './DropdownMenu';
 import "../../style/slider.css"
+import {Text,Flex} from "@chakra-ui/react"
+import { useSelector } from 'react-redux';
 // import "../Login/popup.css"
 // import { MainLogin } from '../Login/Mainlogin';
 
 const Navbar = () => {
   var user = JSON.parse(localStorage.getItem('userData'));
+  const cart = useSelector((store) =>{
+   
+    return store.cartReducer.cart
+    })
   const [popup,popupTrig] = React.useState(false);
   return (
     <>
@@ -58,8 +64,11 @@ const Navbar = () => {
               <FavoriteBorderOutlinedIcon className="icon" />
             </div>
             <div className="iconOne">
-              <Link to="/product/:id">
-                <ShoppingCartOutlinedIcon className="icon" />
+            <Link to="/cart">
+                <Flex>
+                <ShoppingCartOutlinedIcon className="icon"/>
+                  <Text margin="auto" mr="-2rem" color="white" textAlign="center" width="25px" position="relative" left="-0.5rem" top="-1rem" bg="#ff7856" borderRadius="50%" >{cart.length}</Text>
+                </Flex>
               </Link>
             </div>
           </div>
