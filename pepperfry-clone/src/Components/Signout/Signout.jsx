@@ -71,7 +71,7 @@ function Signout() {
         </Button>
         <Modal isOpen={isOpen} onClose={onClose} width="30%">
           <ModalOverlay />
-          <ModalContent p="50px" width="50%">
+          <ModalContent p="50px" width="50%" margin="auto">
             <ModalHeader backgroundColor="orange">{username}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
@@ -79,7 +79,7 @@ function Signout() {
               <VStack alignItems="center">
                 <ReachLink onClick={userFn}>
                   <Text color="#0f5bb9" as="b" fontSize="30px">
-                    Sign out
+                    Log Out
                   </Text>
                 </ReachLink>
               </VStack>
