@@ -1,0 +1,16 @@
+.loginContent{
+    align-items: center;
+    padding:50px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.164);
+}
+
+.continue{
+    color: white;
+    background-color: #aac4e7;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+.darkBlue{
+    background-color: #0d5ab8;
+}

@@ -3,16 +3,23 @@ import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNa
 import Images from '../../Images/logo.png';
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+// import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+import HomeAccount from "../HomeAccount/HomeAccount";
 import { Link  } from 'react-router-dom';
 import DropdownMenu from './DropdownMenu';
 import "../../style/slider.css"
+import {Text,Flex} from "@chakra-ui/react"
+import { useSelector } from 'react-redux';
 // import "../Login/popup.css"
 // import { MainLogin } from '../Login/Mainlogin';
 
 const Navbar = () => {
   var user = JSON.parse(localStorage.getItem('userData'));
-  const [popup,popupTrig] = React.useState(false);
+  const cart = useSelector((store) =>{
+   
+    return store.cartReducer.cart
+    })
+  // const [popup,popupTrig] = React.useState(false);
   return (
     <>
       <Header>
@@ -47,19 +54,23 @@ const Navbar = () => {
               <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
             </div>
             <div className="iconOne">
-              <Link to='/signup'>
+              {/* <Link to='/signup'>
               <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" />
               
               </button>
-              </Link>
+              </Link> */}
+              <HomeAccount login={"LogIn"}/>
               <h6 style={{margin:"0%"}}></h6>
             </div>
             <div className="iconOne">
               <FavoriteBorderOutlinedIcon className="icon" />
             </div>
             <div className="iconOne">
-              <Link to="/product/:id">
-                <ShoppingCartOutlinedIcon className="icon" />
+            <Link to="/cart">
+                <Flex>
+                <ShoppingCartOutlinedIcon className="icon"/>
+                  <Text margin="auto" mr="-2rem" color="white" textAlign="center" width="25px" position="relative" left="-0.5rem" top="-1rem" bg="#ff7856" borderRadius="50%" >{cart.length}</Text>
+                </Flex>
               </Link>
             </div>
           </div>

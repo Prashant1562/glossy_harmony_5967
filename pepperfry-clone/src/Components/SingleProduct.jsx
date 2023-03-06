@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import { MdCheckCircle} from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { getCartData } from '../Redux/CartRedux/action';
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
@@ -36,6 +38,8 @@ const SingleProduct = () => {
     },[id]);
 
   return (
+    <div>
+    <Navbar />
     <Box bg={"#eef6f9"} p="2rem" margin="auto">
       <Flex  justifyContent="space-around" alignItems="center"  bg="white">
         <Box w="30%" marginLeft="50px">
@@ -75,7 +79,8 @@ const SingleProduct = () => {
                 height:"50px",
                 backgroundColor:"white",
                 borderRadius:"10px",
-                border:"2px solid #ff7856"
+                border:"2px solid #ff7856",
+                cursor:"pointer"
 
             }}  onClick={handleAddCard} >ADD TO CART</button>
             <button style={{
@@ -108,6 +113,9 @@ const SingleProduct = () => {
         </Box>
     </Flex>
     </Box>
+    <hr></hr>
+       <Footer />
+       </div>
   )
 }
 
