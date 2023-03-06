@@ -79,7 +79,7 @@ function Signout() {
               <VStack alignItems="center">
                 <ReachLink onClick={userFn}>
                   <Text color="#0f5bb9" as="b" fontSize="30px">
-                    Log out
+                    Log Out
                   </Text>
                 </ReachLink>
               </VStack>
