@@ -7,6 +7,7 @@ import {
   Spacer,
   Button
 } from "@chakra-ui/react";
+import "./Signup.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from 'react-router';
 
@@ -25,12 +26,12 @@ export const Signup_Welcome = () => {
       </div>
       <div className="loginContent">
         <VStack justify="center" pt="2em" width="30%" m="auto">
-          <Text as="b" fontSize="4xl" mb="0.7em">
+          <Text as="b" fontSize="40px" mb="0.7em">
             Welcome {username}
           </Text>
-          <HStack py="0.8em" width='100%'>
+          <HStack py="0.8em" width='30%' margin="auto">
             <Link to="/signup">
-              <Button color="#0f5bb8">
+              <Button color="white" margin="auto"  backgroundColor="blue" padding="20px" fontSize="20px" borderRadius="10px"> 
                 Continue
               </Button>
               </Link>

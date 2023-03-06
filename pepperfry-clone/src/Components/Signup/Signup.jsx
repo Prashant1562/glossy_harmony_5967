@@ -92,7 +92,7 @@ const navigate = useNavigate();
      
       <div className="loginContent">
         <VStack justify="center" padding="10px" width="28%" m="auto">
-          <Text as="b" fontSize="4xl" mb="0.7em">
+          <Text as="b" fontSize="40px" mb="0.7em">
             Create an account
           </Text>
           <Flex

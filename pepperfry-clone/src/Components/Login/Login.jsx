@@ -81,8 +81,8 @@ const Login = () => {
     <div>
       <Navbar/>
       <div className="loginContent">
-        <VStack justify="center" p="50px" width="30%" m="auto">
-          <Text as="b" fontSize="4xl" mb="0.7em">
+        <VStack justify="center" p="10px" width="30%" m="auto">
+          <Text as="b" fontSize="30px" mb="0.7em">
             Sign In
           </Text>
           <Flex
