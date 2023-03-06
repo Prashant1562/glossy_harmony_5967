@@ -70,17 +70,18 @@ function Signout() {
           {localUser.email}
         </Button>
         <Modal isOpen={isOpen} onClose={onClose} width="30%">
-          <ModalOverlay />
+          <ModalOverlay/>
           <ModalContent p="50px" width="50%" margin="auto">
-            <ModalHeader backgroundColor="orange">{username}</ModalHeader>
-            <ModalCloseButton />
+          <ModalCloseButton width="20px" marginLeft="650px" backgroundColor="orange" color="white" border="none"/>
+            <ModalHeader backgroundColor="orange" padding="20px"textAlign="center" fontSize="20px">Hi {username}</ModalHeader>
+    
             <ModalBody>
-              <Box width="100%" backgroundColor="orange" margin="auto">
+              <Box width="100%" backgroundColor="orange" margin="auto" padding="20px">
               <VStack alignItems="center">
                 <ReachLink onClick={userFn}>
-                  <Text color="#0f5bb9" as="b" fontSize="30px">
+                  <Button color="#0f5bb9" as="b" fontSize="20px" backgroundColor="white" padding="10px">
                     Log Out
-                  </Text>
+                  </Button>
                 </ReachLink>
               </VStack>
               </Box>

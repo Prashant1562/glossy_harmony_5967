@@ -12,6 +12,8 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
+  ModalHeader,
+  ModalFooter,
   VStack,
   ModalOverlay,
   useDisclosure,
@@ -62,17 +64,16 @@ const HomeAccount = ({ login }) => {
           backgroundColor="white"
           color="black"
           border="2px solid black"
-          borderRadius="20px"
+          borderRadius="10px"
           height="28px"
           marginLeft="10px"
         >
           {login}
         </Button>
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={onClose} width="30%">
           <ModalOverlay />
-          <ModalContent p="100px" margin="auto" width="40%">
-            
-            <ModalCloseButton />
+          <ModalContent p="70px" width="30%" margin="auto" backgroundColor="white" marginTop="50px" boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px">
+            <ModalCloseButton width="20px" marginLeft="330px" backgroundColor="grey" border="none" color="white" padding="5px" marginBottom="20px"/>
             <ModalBody>
               <VStack alignItems="center">
                 <Button
@@ -81,16 +82,17 @@ const HomeAccount = ({ login }) => {
                   backgroundColor="orange"
                   color="white"
                   _hover={{ bg: "#5b9be9" }}
-                  height="30px"
+                  fontSize="20px"
+                  padding="10px"
                 >
                   <Link as={ReachLink} to="/login">
                     Sign in
                   </Link>
                 </Button>
-                <Box width="100%" backgroundColor="pink" border="1px solid red" margin="auto" textAlign="center">
+                <Box width="100%" backgroundColor="#3333ff" margin="auto" textAlign="center" padding="10px">
                 <ReachLink to="/signup" onClick={onClose}>
                   
-                  <Text color="#0f5bb9" as="b" fontSize="30px" textAlign="center">
+                  <Text color="white" as="b" fontSize="20px" textAlign="center">
                     Create a free account
                   </Text>
                   
@@ -100,6 +102,7 @@ const HomeAccount = ({ login }) => {
             </ModalBody>
           </ModalContent>
         </Modal>
+       
       </>
     );
   }
