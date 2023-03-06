@@ -10,6 +10,7 @@ import Success from '../Components/SucessPage/Success';
 import Login from '../Components/Login/Login';
 import Signup from '../Components/Signup/Signup';
 import { Signup_Welcome } from '../Components/Signup/Signup_Welcome';
+import { PrivateRoute } from './PrivateRoute';
 
 
 const Routing = () => {
@@ -20,8 +21,8 @@ const Routing = () => {
           <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
           <Route path="/sofas" element={<ProductPage />} />
-            <Route path='/sofas/:id' element={<SingleProduct />} /> 
-            <Route path="/cart" element={<Cart />} />
+            <Route path='/sofas/:id' element={<PrivateRoute><SingleProduct /></PrivateRoute>} /> 
+            <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
             <Route path="/checkout" element={<MainCheckout />} /> 
         <Route path="/cardpayment" element={<CardPayment />} />
         <Route path="/paymentdone" element={<Success />} />

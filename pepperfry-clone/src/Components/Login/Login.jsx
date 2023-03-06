@@ -23,6 +23,8 @@ import app from "../../Firebase/firebase";
 import { saveDataLocal } from "../LocalStorage/usernamePassword";
 import { useDispatch } from 'react-redux';
 import { loginRequest, loginSuccess, loginError } from '../../Redux/AuthReducer/action';
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Login = () => {
   const navigate = useNavigate()
@@ -77,7 +79,7 @@ const Login = () => {
   };
   return (
     <div>
-      
+      <Navbar/>
       <div className="loginContent">
         <VStack justify="center" p="50px" width="30%" m="auto">
           <Text as="b" fontSize="4xl" mb="0.7em">
@@ -157,6 +159,7 @@ const Login = () => {
           </Box>
         </VStack>
       </div>
+      <Footer/>
     </div>
   );
 };
